@@ -44,6 +44,7 @@ class Song
   end
 
   def self.alphabetical
+    # @@all.sort_by { |name| name.name }
     sorted_names = @@all.map { |song| song.name }.sort
     sorted_instances = sorted_names.map { |name| @@all.find { |song| song.name == name}}
     sorted_instances
